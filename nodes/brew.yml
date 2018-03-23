@@ -5,6 +5,7 @@ brew:
     - caskroom/fonts
     - sanemat/font
   packages:
+    - ruby
     - git
     - vim
     - zsh

@@ -19,7 +19,7 @@ node["brew"]["packages"].each do |package|
     elsif package == 'git'
       command "brew install #{package} --with-brewed-curl --with-brewed-openssl"
     elsif package == 'vim'
-      command "brew install #{package} --with-lua --with-python3 --override-system-vi"
+      command "brew install #{package} --with-lua --override-system-vi"
     elsif package == 'zsh'
       command "brew install #{package} --without-etcdir"
     else

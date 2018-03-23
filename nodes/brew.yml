@@ -1,0 +1,57 @@
+brew:
+  repositories:
+    - homebrew/versions
+    - caskroom/versions
+    - caskroom/fonts
+    - sanemat/font
+  packages:
+    - git
+    - vim
+    - zsh
+    - carthage
+    - curl
+    - emacs
+    - exa
+    - fish
+    - fontforge
+    - fontconfig
+    - gcc
+    - go
+    - gnu-sed
+    - gnupg
+    - grep
+    - heroku-toolbelt
+    - hub
+    - hugo
+    - jq
+    - kotlin
+    - less
+    - lua
+    - mecab
+    - mecab-ipadic
+    - nkf
+    - node
+    - pandoc
+    - pngquant
+    - python3
+    - pyenv
+    - rbenv
+    - reattach-to-user-namespace
+    - rust
+    - readline
+    - ruby-build
+    - source-highlight
+    - terminal-notifier
+    - the_platinum_searcher
+    - tidy-html5
+    - tig
+    - tree
+    - tmux
+    - vim
+    - zsh-completions
+  cask_packages:
+    - java
+    - xquartz
+    - caffeine
+    - shiftit
+    - font-open-sans

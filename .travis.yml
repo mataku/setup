@@ -1,10 +1,10 @@
 os: osx
 before_install:
-	- brew update
-	- brew install ansible
+  - brew update
+  - brew install ansible
 script:
-	- gem i bundler --no-doc
-	- bundle exec itamae local recipes/brew.rb -y nodes/brew.yml
+  - gem i bundler --no-doc
+  - bundle exec itamae local recipes/brew.rb -y nodes/brew.yml
 cache:
   directories:
     - vendor/bundle

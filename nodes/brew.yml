@@ -16,7 +16,6 @@ brew:
     - fish
     - fontforge
     - fontconfig
-    - gcc
     - go
     - gnu-sed
     - gnupg

@@ -1,7 +1,6 @@
 os: osx
 before_install:
-  - brew update
-  - brew install ansible
+  - export HOMEBREW_NO_AUTO_UPDATE=1
 script:
   - gem i bundler --no-doc
   - bundle exec itamae local recipes/brew.rb -y nodes/brew.yml

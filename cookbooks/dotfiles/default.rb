@@ -1,3 +1,7 @@
+execute 'Create config dir' do
+  command 'mkdir -p ~/.config'
+end
+
 git File.expand_path('~/dotfiles') do
   repository 'https://github.com/mataku/dotfiles.git'
 end

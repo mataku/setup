@@ -1,10 +1,10 @@
 brew:
-  repositories:
-    - homebrew/versions
-    - caskroom/versions
+  enable_update: false
+  enable_upgrade: false
+  add_repositories:
     - caskroom/fonts
     - sanemat/font
-  packages:
+  install_packages:
     - ruby
     - git
     - vim
@@ -49,7 +49,7 @@ brew:
     - tmux
     - vim
     - zsh-completions
-  cask_packages:
+  install_apps:
     - java
     - xquartz
     - caffeine

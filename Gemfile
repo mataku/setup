@@ -1,4 +1,5 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "rake"
-gem "itamae"
+gem 'itamae'
+gem 'itamae-plugin-recipe-homebrew'
+gem 'rake'

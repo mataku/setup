@@ -1,5 +1,7 @@
-execute 'Create config dir' do
-  command 'mkdir -p ~/.config'
+%w(.atom .config).each do |dir|
+  execute 'Create config dir' do
+    command "mkdir -p ~/#{dir}"
+  end
 end
 
 git File.expand_path('~/dotfiles') do

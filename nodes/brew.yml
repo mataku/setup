@@ -6,12 +6,12 @@ brew:
     - sanemat/font
   install_packages:
     - ruby
-    - git
-    - vim
-    - zsh
+    - git --with-brewed-curl --with-brewed-openssl
+    - vim --with-lua --override-system-vi
+    - zsh --without-etcdir
     - carthage
     - curl
-    - emacs
+    - -f emacs
     - exa
     - fish
     - fontforge

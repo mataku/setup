@@ -40,6 +40,7 @@ brew:
     - rust
     - readline
     - ruby-build
+    - ricty --with-powerline
     - source-highlight
     - terminal-notifier
     - the_platinum_searcher

@@ -56,3 +56,25 @@ brew:
     - caffeine
     - shiftit
     - font-open-sans
+
+gui:
+  packages:
+    - 1Password
+    - Android Studio
+    - Alfred
+    - App cleaner
+    - ATOK
+    - Atom
+    - Bear
+    - Diaplay menu
+    - Flux
+    - Google Chrome
+    - iTerm2
+    - Karabiner-elements 
+    - Neptune
+    - Onyx
+    - Sketch
+    - Slack
+    - TweetBot
+    - Vivaldi
+    - Xcode

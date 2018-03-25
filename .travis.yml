@@ -2,7 +2,7 @@ os: osx
 before_install:
 - export HOMEBREW_NO_AUTO_UPDATE=1
 script:
-- ./bin/ci/run.sh
+- ./run_ci.sh
 cache:
   directories:
   - vendor/bundle

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe file File.expand_path('github.com/dotfiles', '~') do
+describe file File.expand_path('src/github.com/dotfiles', '~') do
   it { is_expected.to be_directory }
 end
 

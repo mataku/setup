@@ -9,6 +9,7 @@ brew:
     - git --with-brewed-curl --with-brewed-openssl
     - vim --with-lua --override-system-vi
     - zsh --without-etcdir
+    - bat
     - carthage
     - curl
     - -f emacs

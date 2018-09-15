@@ -2,7 +2,8 @@ os: osx
 before_install:
 - export HOMEBREW_NO_AUTO_UPDATE=1
 script:
-- ./run_ci.sh
+- ./init.sh
+- bundle exec rake spec
 cache:
   directories:
   - vendor/bundle

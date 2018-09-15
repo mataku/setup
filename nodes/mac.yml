@@ -1,10 +1,8 @@
-brew:
-  enable_update: false
-  enable_upgrade: false
-  add_repositories:
+homebrew:
+  repositories:
     - caskroom/fonts
     - sanemat/font
-  install_packages:
+  packages:
     - ruby
     - git --with-brewed-curl --with-brewed-openssl
     - vim --with-lua --override-system-vi
@@ -51,7 +49,7 @@ brew:
     - tmux
     - vim
     - zsh-completions
-  install_apps:
+  cask_packages:
     - java
     - xquartz
     - caffeine

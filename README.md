@@ -1,6 +1,5 @@
 ## Installation
 
 ```bash
-$ git clone git://github.com/mataku/mac-setup.git
-$ mac-setup/init.sh
+$ /bin/bash -c "$(curl -L https://raw.githubusercontent.com/mataku/mac-setup/master/init.sh)"
 ```

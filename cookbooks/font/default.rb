@@ -3,5 +3,5 @@ execute 'Copy ricty font' do
 end
 
 execute 'Install fonts' do
-  commend 'fc-cache -vf'
+  command 'fc-cache -vf'
 end

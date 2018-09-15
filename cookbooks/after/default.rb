@@ -1,5 +1,3 @@
-require 'yaml'
-
 execute 'Install terminal-notifier' do
   command 'gem i terminal-notifier --no-doc'
 end

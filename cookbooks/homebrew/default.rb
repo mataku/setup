@@ -10,13 +10,13 @@ node['homebrew']['repositories'].each do |repo|
 end
 
 node['homebrew']['packages'].each do |package|
-  execute 'Install packages' do
+  execute "Install #{package}" do
     command "brew install #{package}"
   end
 end
 
 node['homebrew']['cask_packages'].each do |package|
-  execute 'Install packages via cask' do
+  execute "Install #{package} via cask" do
     command "brew cask install #{package}"
   end
 end

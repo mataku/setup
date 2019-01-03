@@ -17,12 +17,12 @@ homebrew:
     - fontforge
     - fontconfig
     - go
+    - ghq
     - gnu-sed
     - gnupg
     - grep
-    - heroku-toolbelt
+    - heroku
     - hub
-    - hugo
     - jq
     - kotlin
     - less
@@ -61,6 +61,7 @@ gui:
     - 1Password
     - Android Studio
     - Alfred
+    - Amphetamine
     - App cleaner
     - ATOK
     - Atom

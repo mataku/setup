@@ -4,9 +4,8 @@ homebrew:
     - sanemat/font
   packages:
     - ruby
-    - git --with-brewed-curl --with-brewed-openssl
-    - vim --with-lua --override-system-vi
-    - zsh --without-etcdir
+    - git
+    - vim
     - bat
     - carthage
     - curl
@@ -21,7 +20,6 @@ homebrew:
     - gnu-sed
     - gnupg
     - grep
-    - heroku
     - hub
     - jq
     - kotlin
@@ -40,7 +38,7 @@ homebrew:
     - rust
     - readline
     - ruby-build
-    - ricty --with-powerline
+    - ricty
     - source-highlight
     - the_platinum_searcher
     - tidy-html5
@@ -48,13 +46,10 @@ homebrew:
     - tree
     - tmux
     - vim
-    - zsh-completions
   cask_packages:
     - java
     - xquartz
     - caffeine
-    - shiftit
-    - font-open-sans
 
 gui:
   packages:

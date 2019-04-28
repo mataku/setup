@@ -8,6 +8,6 @@ execute 'Install dependencies' do
 end
 
 execute 'Install dependencies via mas' do
-  command 'brew bundle --file Brewfile.mas'
+  command 'brew bundle --file=Brewfile.mas'
   not_if { ENV['CI'] == "false" }
 end

@@ -27,7 +27,6 @@ brew "jq"
 brew "kotlin"
 brew "less"
 brew "lua"
-brew "mas"
 brew "mecab"
 brew "mecab-ipadic"
 brew "nkf"
@@ -55,7 +54,3 @@ brew "heroku/brew/heroku"
 brew "sanemat/font/ricty"
 cask "google-cloud-sdk"
 cask "xquartz"
-# mas "1Password", id: 443987910
-# mas "Tweetbot", id: 1384080005
-# mas "Amphetamine", id: 937984704
-# mas "Display Menu", id: 549083868

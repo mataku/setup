@@ -1,5 +1,6 @@
 include_recipe '../cookbooks/homebrew/default'
 include_recipe '../cookbooks/dotfiles/default'
 include_recipe '../cookbooks/terminal/default'
+include_recipe '../cookbooks/golang/default'
 include_recipe '../cookbooks/font/default'
 include_recipe '../cookbooks/after/default'

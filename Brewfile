@@ -50,11 +50,12 @@ brew "tig"
 brew "tmux"
 brew "tree"
 brew "vim"
+brew "fzf"
 brew "heroku/brew/heroku"
 brew "sanemat/font/ricty"
 cask "google-cloud-sdk"
 cask "xquartz"
-mas "1Password", id: 443987910
-mas "Tweetbot", id: 1384080005
-mas "Amphetamine", id: 937984704
-mas "Display Menu", id: 549083868
+# mas "1Password", id: 443987910
+# mas "Tweetbot", id: 1384080005
+# mas "Amphetamine", id: 937984704
+# mas "Display Menu", id: 549083868

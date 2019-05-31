@@ -4,7 +4,7 @@ execute 'Install homebrew' do
 end
 
 execute 'Install dependencies' do
-  command 'brew update && brew bundle'
+  command 'brew bundle'
 end
 
 execute 'Install dependencies via mas' do

@@ -1,6 +1,6 @@
 os: osx
 before_install:
-  - brew update
+  - brew update -verbose
 script:
 - set -ex
 - CI=true ./init.sh

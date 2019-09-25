@@ -13,6 +13,6 @@ jobs:
         set -ex
         CI=true ./init.sh
         bundle exec rake spec
-    - name: Notify failure message to slack
+    - name: Slack notify
       uses: rtCamp/action-slack-notify@v1.0.0
       if: always()

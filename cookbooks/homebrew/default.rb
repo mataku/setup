@@ -9,5 +9,5 @@ end
 
 execute 'Install dependencies via mas' do
   command 'brew bundle --file=Brewfile.mas'
-  not_if { ENV['CI'] == "false" }
+  not_if { ENV['CI'] == "true" }
 end

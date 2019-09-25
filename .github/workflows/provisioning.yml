@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-10.14
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Provisioning
+      run: |
+        set -ex
+        CI=true ./init.sh
+        bundle exec rake spec

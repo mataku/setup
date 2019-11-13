@@ -4,7 +4,7 @@ describe file File.expand_path('src/github.com/dotfiles', '~') do
   it { is_expected.to be_directory }
 end
 
-%w(.vim .emacs.d .config/fish .config/fish/functions .config/powerline .atom).each do |dir|
+%w(.vim .emacs.d .config/fish .config/fish/functions).each do |dir|
   describe file File.expand_path(dir, '~') do
     it { is_expected.to be_directory }
   end

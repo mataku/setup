@@ -12,6 +12,7 @@ jobs:
       run: |
         set -ex
         CI=true ./init.sh
+        bundle install --path vendor/bundle
         bundle exec rake spec
     - name: Slack notify
       env:

@@ -14,7 +14,7 @@ jobs:
         CI=true ./init.sh
         bundle install --path vendor/bundle
         bundle exec rake spec
-    - name: Slack notify
+    - name: Slack notification with green
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
       uses: k0kubun/action-slack@v2.0.0
@@ -24,7 +24,23 @@ jobs:
             "attachments": [{
                 "title": "${{ job.status }}: ${{ github.workflow }}",
                 "title_link": "${{ job.status}}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks",
-                "text": "${{ github.repository }}@${{ github.ref }}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>"
+                "text": "${{ github.repository }}@${{ github.ref }}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                "color": "good"
             }]
           }
-      if: always()
+      if: success()
+    - name: Slack notification with danger
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+      uses: k0kubun/action-slack@v2.0.0
+      with:
+        payload: |
+          {
+            "attachments": [{
+                "title": "${{ job.status }}: ${{ github.workflow }}",
+                "title_link": "${{ job.status}}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks",
+                "text": "${{ github.repository }}@${{ github.ref }}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+                "color": "danger"
+            }]
+          }
+      if: failure()

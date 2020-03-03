@@ -11,3 +11,8 @@ end
 execute 'Create symbolic links' do
   command '/bin/bash ~/src/github.com/dotfiles/install.sh'
 end
+
+execute 'Install fisher' do
+  command 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish'
+  command 'echo "Execute fisher in fish shell!"'
+end

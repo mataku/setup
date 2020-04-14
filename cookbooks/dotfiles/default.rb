@@ -16,3 +16,7 @@ execute 'Install fisher' do
   command 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish'
   command 'echo "Execute fisher in fish shell!"'
 end
+
+execute 'Install bundletool' do
+  command 'curl -sLO https://github.com/google/bundletool/releases/download/0.13.4/bundletool-all.jar -o ~/src/github.com/dotfiles/bin/bundletool.jar'
+end

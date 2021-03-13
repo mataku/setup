@@ -6,9 +6,9 @@ if [ ! $CI ]; then
 fi
 
 mkdir -p ~/src/github.com/mataku
-git clone https://github.com/mataku/mac-setup ~/src/github.com/mataku/mac-setup
-cd ~/src/github.com/mataku/mac-setup
-curl -Lo mitamae-x86_64-darwin.tar.gz https://github.com/k0kubun/mitamae/releases/download/v${MITAMAE_VERSION}/mitamae-x86_64-darwin.tar.gz
+git clone https://github.com/mataku/setup ~/src/github.com/mataku/setup
+cd ~/src/github.com/mataku/setup
+curl -Lo mitamae-x86_64-darwin.tar.gz https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/mitamae-x86_64-darwin.tar.gz
 tar -zxf mitamae-x86_64-darwin.tar.gz
 rm mitamae-x86_64-darwin.tar.gz
 chmod +x mitamae-x86_64-darwin

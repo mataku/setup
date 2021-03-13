@@ -12,6 +12,6 @@ curl -Lo mitamae-x86_64-darwin.tar.gz https://github.com/k0kubun/mitamae/release
 tar -zxf mitamae-x86_64-darwin.tar.gz
 rm mitamae-x86_64-darwin.tar.gz
 chmod +x mitamae-x86_64-darwin
-mkdir bin && mv mitamae-x86_64-darwin bin/mitamae
+mkdir -p bin && mv mitamae-x86_64-darwin bin/mitamae
 echo y | bin/mitamae local ./recipes/all.rb -y ./nodes/mac.yml --log-level=DEBUG
 cd -

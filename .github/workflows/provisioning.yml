@@ -20,7 +20,16 @@ jobs:
         bundle exec rake spec
     - name: Slack notification
       env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        SLACK_USERNAME: GitHub Actions
-      uses: rtCamp/action-slack-notify@v2
-      if: ${{ failure() || success() }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+      uses: k0kubun/action-slack@v2.0.0
+      with:
+        payload: |
+          {
+            "attachments": [{
+              "title": "${{ job.status }}: ${{ github.workflow }}",
+              "title_link": "${{ job.status}}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}/checks",
+              "text": "${{ github.repository }}@${{ github.ref }}: <https://github.com/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>",
+              "color": "danger"
+            }]
+          }
+      if: failure()

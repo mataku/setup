@@ -1,6 +1,7 @@
 name: Provisioning
 
 on:
+  push:
   schedule:
     - cron: 00 12 * * 1
 

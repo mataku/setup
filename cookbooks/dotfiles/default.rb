@@ -20,3 +20,11 @@ end
 execute 'Install bundletool' do
   command 'curl -sLO https://github.com/google/bundletool/releases/download/0.13.4/bundletool-all.jar -o ~/src/github.com/dotfiles/bin/bundletool.jar'
 end
+
+execute 'mkdir emacs themes dir' do
+  command 'mkdir -p ~/.emacs.d/themes/'
+end
+
+git File.expand_path('~/.emacs.d/themes/material-theme') do
+  repository 'https://github.com/mataku/emacs-material-theme'
+end

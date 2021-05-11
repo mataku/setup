@@ -1,4 +1,4 @@
-%w(.atom .config src).each do |dir|
+%w(.config src).each do |dir|
   execute 'Create config dir' do
     command "mkdir -p ~/#{dir}"
   end

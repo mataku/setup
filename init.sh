@@ -11,17 +11,25 @@ else
   suffix="linux"
 fi
 
+if [ $(uname -m) = 'x86_64' ]; then
+  arch="x86_64"
+else
+  arch="aarch64"
+fi
+
+binary=mitamae-$arch-$suffix
+
 if [ ! $CI ]; then
   mkdir -p ~/src/github.com/mataku
   git clone https://github.com/mataku/setup ~/src/github.com/mataku/setup
   cd ~/src/github.com/mataku/setup
 fi
 
-curl -Lo mitamae.tar.gz https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/mitamae-x86_64-$suffix.tar.gz
+curl -Lo mitamae.tar.gz https://github.com/itamae-kitchen/mitamae/releases/download/v${MITAMAE_VERSION}/$binary.tar.gz
 tar -zxf mitamae.tar.gz
 rm mitamae.tar.gz
-chmod +x mitamae-x86_64-$suffix
-mkdir -p bin && mv mitamae-x86_64-$suffix bin/mitamae
+chmod +x $binary
+mkdir -p bin && mv $binary bin/mitamae
 echo y | bin/mitamae local ./recipes/all.rb -y ./nodes/mac.yml --log-level=DEBUG
 
 if [ ! $CI } ]; then

@@ -1,6 +1,6 @@
 execute 'Install homebrew' do
-  command '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-  not_if 'test $(which /usr/local/bin/brew)'
+  command '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+  not_if 'test $(which brew)'
 end
 
 execute 'Install dependencies' do

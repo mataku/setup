@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-MITAMAE_VERSION="1.6.3"
+MITAMAE_VERSION="1.12.4"
 
 if [ ! $CI ] && [ $(uname) = 'Darwin' ]; then
   xcode-select --install

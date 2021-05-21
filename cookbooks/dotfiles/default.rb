@@ -1,4 +1,4 @@
-%w(.config src).each do |dir|
+%w(.config/coc/extensions src).each do |dir|
   execute 'Create config dir' do
     command "mkdir -p ~/#{dir}"
   end
@@ -27,4 +27,8 @@ end
 
 git File.expand_path('~/.emacs.d/themes/material-theme') do
   repository 'https://github.com/mataku/emacs-material-theme'
+end
+
+execute 'Install coc extensions' do
+  command 'cd ~/.config/coc/extensions && npm i --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod && cd -'
 end

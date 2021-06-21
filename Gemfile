@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-gem 'serverspec'
+group :test do
+  gem 'rake'
+  gem 'serverspec'
+end

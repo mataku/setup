@@ -1,10 +1,15 @@
 execute 'Install homebrew' do
   command '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-  not_if 'test $(which brew)'
+  not_if { 'test /usr/local/bin/brew' || 'test /opt/homebrew/bin/brew' }
 end
 
 execute 'Install dependencies' do
-  command 'brew bundle'
+  brew_command = if `uname -m` == 'arm64'
+                   '/opt/homebrew/bin/brew'
+                 else
+                   '/usr/local/bin/brew'
+                 end
+  command "#{brew_command} bundle"
 end
 
 execute 'Install dependencies via mas' do

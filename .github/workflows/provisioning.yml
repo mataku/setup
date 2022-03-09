@@ -2,15 +2,15 @@ name: Provisioning
 
 on:
   push:
-  schedule:
-    - cron: 00 12 * * 1
+    branches:
+      - '**'
 
 jobs:
   build:
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Provisioning
       run: |
         set -ex

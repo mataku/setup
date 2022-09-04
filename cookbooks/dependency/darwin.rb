@@ -1,6 +1,6 @@
 execute 'Install homebrew' do
   command '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-  not_if { 'test /usr/local/bin/brew' || 'test /opt/homebrew/bin/brew' }
+  not_if { 'test -x /usr/local/bin/brew' || 'test -x /opt/homebrew/bin/brew' }
 end
 
 execute 'Install dependencies' do

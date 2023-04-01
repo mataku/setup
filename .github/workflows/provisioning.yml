@@ -16,6 +16,7 @@ jobs:
       run: |
         set -ex
         ./bin/ci/cleanup.sh
+        brew unlink tcl-tk # workaround for pt
         CI=true ./init.sh
         bundle install --path vendor/bundle
         bundle exec rake spec
